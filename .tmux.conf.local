@@ -371,3 +371,7 @@ set -g history-limit 10000
 #
 # "$@"
 # # /!\ do not remove the previous line
+
+# syncronyze panes
+bind C-s setw synchronize-panes
+
