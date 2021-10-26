@@ -440,3 +440,7 @@ tmux_conf_uninstall_plugins_on_reload=true
 # syncronyze panes
 bind C-s setw synchronize-panes
 
+# Move window to left
+bind -n C-S-Left { swap-window -t -1; previous-window }
+# Move window to right
+bind -n C-S-Right { swap-window -t +1; next-window }
