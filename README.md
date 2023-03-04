@@ -42,10 +42,10 @@ curl -fsSL "https://github.com/gpakosz/.tmux/raw/refs/heads/master/install.sh#$(
 
 **Manual installation in `~`**
 ```
-$ cd
-$ git clone --single-branch https://github.com/gpakosz/.tmux.git
-$ ln -s -f .tmux/.tmux.conf
-$ cp .tmux/.tmux.conf.local .
+$ mkdir -p ~/projects/github.com/bcfurtado
+$ git clone https://github.com/bcfurtado/.tmux.git ~/projects/github.com/bcfurtado/tmux
+$ ln -s -f ~/projects/github.com/bcfurtado/tmux/.tmux.conf
+$ ln -s -f ~/projects/github.com/bcfurtado/tmux/.tmux.conf.bruno.local ~/.tmux.conf.local
 ```
 
 **Manual installation in `$XDG_CONFIG_HOME/tmux`**
