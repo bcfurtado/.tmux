@@ -1,0 +1,48 @@
+# session creation
+tmux_conf_new_session_prompt=true
+
+# windows & pane creation
+tmux_conf_new_window_retain_current_path=true
+
+# display
+tmux_conf_24b_colour=true
+
+# default theme
+tmux_conf_theme_colour_2="#8a8a8a"    # light gray
+
+# clipboard
+tmux_conf_copy_to_os_clipboard=true
+
+# user customizations
+set -g history-limit 10000
+
+# syncronyze panes
+bind C-s setw synchronize-panes
+
+# Move window to left
+bind -n C-S-Left { swap-window -t -1; previous-window }
+
+# Move window to right
+bind -n C-S-Right { swap-window -t +1; next-window }
+
+# show pane name at top
+set -g pane-border-status top
+
+# Set name to pane
+bind-key N command-prompt "select-pane -T '%%'"
+
+# Unset the secondary prefix
+set -gu prefix2
+unbind C-a
+
+# Slightly longer pane indicators display time
+set -g display-panes-time 2000
+
+# unbind default split current window horizontally
+unbind -
+
+# split current window horizontally
+bind _ split-window -v
+
+# split current window vertically
+bind | split-window -h
