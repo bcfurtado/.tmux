@@ -32,6 +32,9 @@ tmux_conf_copy_to_os_clipboard=true
 # user customizations
 set -g history-limit 100000
 
+# split right and launch claude in current path
+bind C split-window -h -c "#{pane_current_path}" "claude"
+
 # syncronyze panes
 bind C-s setw synchronize-panes
 
