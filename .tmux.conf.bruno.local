@@ -30,7 +30,7 @@ tmux_conf_theme_colour_17="#eff0eb"   # white (right section 3 - hostname)
 tmux_conf_copy_to_os_clipboard=true
 
 # user customizations
-set -g history-limit 10000
+set -g history-limit 100000
 
 # syncronyze panes
 bind C-s setw synchronize-panes
