@@ -47,6 +47,10 @@ set -g pane-border-status top
 # Set name to pane
 bind-key N command-prompt "select-pane -T '%%'"
 
+# Move current window to another session (prefix + M)
+# Shows a menu of existing sessions + a "New session..." option.
+bind-key M run-shell '"$(dirname "$(realpath "$TMUX_CONF_LOCAL")")/move-window-to-session.sh"'
+
 # Unset the secondary prefix
 set -gu prefix2
 unbind C-a
