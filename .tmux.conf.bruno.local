@@ -32,6 +32,21 @@ tmux_conf_copy_to_os_clipboard=true
 # user customizations
 set -g history-limit 100000
 
+# allow OSC passthrough (images, inline rendering from Claude Code, etc.)
+set -g allow-passthrough on
+
+# OSC 8 hyperlinks (cmd-click file references) + undercurl for diagnostics
+set -as terminal-features ',*:hyperlinks'
+set -as terminal-features ',*:usstyle'
+
+# mouse on by default (scroll long Claude outputs without prefix m)
+set -g mouse on
+
+# notify on bell from background windows (long Claude tasks)
+set -g monitor-bell on
+set -g visual-bell off
+set -g bell-action other
+
 # split right and launch claude in current path
 bind C split-window -h -c "#{pane_current_path}" "claude"
 
